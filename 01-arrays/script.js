@@ -1,11 +1,11 @@
 const teachers = [
-  // 'Nathan',
-  // 'Ed',
-  // 'Fabio',
-  // 'Phil',
-  // 'Carlo',
+  'Nathan',
+  'Ed',
+  'Fabio',
+  'Phil',
+  'Carlo',
   'Lewis',
-  // 'Luca'
+  'Luca'
 ];
  // NON MODIFICARE QUESTA VARIABILE
 
@@ -45,13 +45,15 @@ teachers.unshift("Sarah");
 // 7. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
 
+// const isFabioPresent = teachers.includes("Fabio");
+
 let isFabioPresent = false;
-for(i = 0 ; i < 7 ; i++ ) {
+for( let i = 0 ; i < teachers.length ; i++ ) {
   if( teachers[i] ==="Fabio"){
-    isFabioPresent = true
+    isFabioPresent = true;
   }
 }
-// console.log(isFabioPresent);
+console.log(isFabioPresent);
 
 // 8. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
@@ -62,16 +64,13 @@ const lewisIndex = teachers.indexOf("Lewis");
 // 9. Unisci tutti gli insegnanti nell'array teachers in una stringa
 // separata da virgole e salvala nella variabile teachersString
 
-const teachersString = null;
-const teachersString = teachers.toString()
-// console.log(teachersString);
+// const teachersString = teachers.toString();
+const teachersString = teachers.join(", ");
+console.log(teachersString);
 
 // 10. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = false
 
-  if(teachers.length() == 0){
-    isTeachersEmpty = true;
-  }
+let isTeachersEmpty = !teachers.length;
 
 console.log(isTeachersEmpty);
